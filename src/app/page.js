@@ -4,6 +4,7 @@ import LogoCloud from "@/components/LogoCloud";
 import Feature from "@/components/Feature";
 import Stats from "@/components/Stats";
 import CTA from "@/components/CTA";
+import Header from "@/components/Header";
 
 const footerNavigation = {
   solutions: [
@@ -98,6 +99,7 @@ const footerNavigation = {
 export default function Home() {
   return (
     <div className="bg-gray-900">
+      <Header />
       <main>
         <Hero />
         <LogoCloud />
