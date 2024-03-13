@@ -1,11 +1,3 @@
-import Image from "next/image";
-import Hero from "@/components/Hero";
-import LogoCloud from "@/components/LogoCloud";
-import Feature from "@/components/Feature";
-import Stats from "@/components/Stats";
-import CTA from "@/components/CTA";
-import Header from "@/components/Header";
-
 const footerNavigation = {
   solutions: [
     { name: "Hosting", href: "#" },
@@ -96,43 +88,35 @@ const footerNavigation = {
   ],
 };
 
-export default function Home() {
+function Footer() {
+  {
+    /* Footer */
+  }
   return (
-    <div className="bg-gray-900">
-      <Header />
-      <main>
-        <Hero />
-        <LogoCloud />
-        <Feature />
-        <Stats />
-        <CTA />
-      </main>
-
-      {/* Footer */}
-      <footer aria-labelledby="footer-heading" className="relative">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-4 lg:px-8">
-          <div className="border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
-            <div className="flex space-x-6 md:order-2">
-              {footerNavigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-500 hover:text-gray-400"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-            <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-              &copy; 2020 Your Company, Inc. All rights reserved.
-            </p>
+    <footer aria-labelledby="footer-heading" className="relative bg-gray-900">
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-4 lg:px-8">
+        <div className="border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+          <div className="flex space-x-6 md:order-2">
+            {footerNavigation.social.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-500 hover:text-gray-400"
+              >
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
+              </a>
+            ))}
           </div>
+          <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+            &copy; 2020 Your Company, Inc. All rights reserved.
+          </p>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 }
+export default Footer;
