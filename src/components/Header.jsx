@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Image } from "next/image";
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
@@ -9,7 +10,7 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 import Link from "next/link";
-import Image from "next/image";
+
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,10 +24,12 @@ function Header() {
           <div className="flex lg:flex-1">
             <a href="http://localhost:3000/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
+              <Image
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt=""
+                alt="logo"
+                width="10px"
+                height="10px"
               />
             </a>
           </div>
@@ -77,10 +80,12 @@ function Header() {
             <div className="flex items-center justify-between">
               <a href="http://localhost:3000/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
+                <Image
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt=""
+                  alt="logo"
+                width="10px"
+                height="10px"
                 />
               </a>
               <button
